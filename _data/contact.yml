@@ -1,0 +1,12 @@
+- type: github
+  icon: 'fab fa-github'
+  url: 'https://github.com/Obsidian-Owl'
+  
+- type: email
+  icon: 'fas fa-envelope'
+  url: 'mailto:macmilky1@gmail.com'
+  noblank: true
+  
+- type: linkedin
+  icon: 'fab fa-linkedin'
+  url: 'https://www.linkedin.com/in/daniel-mccarthy-87458920/'
