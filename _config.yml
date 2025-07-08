@@ -16,7 +16,7 @@ permalink: /:year/:month/:day/:title/
 
 # Site URL (update when you know it)
 url: "https://obsidian-owl.github.io"
-baseurl: "/blog"  # or "" if using obsidian-owl.github.io directly
+baseurl: "/engineering-blog"  # or "" if using obsidian-owl.github.io directly
 
 # Social links (optional)
 github: https://github.com/MacAttak
