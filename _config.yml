@@ -1,23 +1,121 @@
-# Site settings
+# Site Settings
 title: Obsidian Owl Engineering
-description: AI Development Workflows, Architecture, and Real-World Lessons
-author: Daniel McCarthy
-email: macmilky1@gmail.com
+tagline: AI Development Workflows & Architecture
+description: Exploring the intersection of AI and software development through real-world experience.
+url: "https://obsidian-owl.github.io"
+baseurl: "/engineering-blog"
 
-# Build settings
+# Author
+author: Daniel McCarthy
+
+# Social
+social:
+  name: Daniel McCarthy
+  email: macmilky1@gmail.com
+  links:
+    - https://github.com/Obsidian-Owl
+    - https://www.linkedin.com/in/daniel-mccarthy-87458920/
+
+# Site Verification (optional)
+google_site_verification: # fill in your Google verification code
+
+# Analytics (optional)
+google_analytics:
+  id: # fill in your Google Analytics ID
+
+# Theme
 theme: jekyll-theme-chirpy
+
+# Timezone
+timezone: Australia/Sydney
+
+# jekyll-seo-tag settings
+twitter:
+  username: # twitter username without @
+  
+# Comments (optional - uses GitHub discussions)
+comments:
+  active: giscus
+  giscus:
+    repo: Obsidian-Owl/engineering-blog
+    repo_id: # Get from https://giscus.app
+    category: Comments
+    category_id: # Get from https://giscus.app
+
+# Reading time
+reading_time: true
+
+# Appearance
+appearance: "auto" # auto, light, or dark
+
+# The CDN endpoint for images.
+# Notice that once it is assigned, the CDN url
+# will be added to all image (avatar, posts' images, etc.) paths
+img_cdn:
+
+# Profile sidebar
+avatar: # path to avatar image
+
+# Tabs on sidebar
+tabs:
+  - About
+  - Archives
+  - Categories  
+  - Tags
+
+# Pagination
+paginate: 10
+
+# Plugins
 plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-sitemap
+  - jekyll-archives
 
-# Permalink structure
-permalink: /:year/:month/:day/:title/
+# Archives
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/
 
-# Site URL (update when you know it)
-url: "https://obsidian-owl.github.io"
-baseurl: "/engineering-blog"  # or "" if using obsidian-owl.github.io directly
+# Build settings
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
 
-# Social links (optional)
-github: https://github.com/MacAttak
-linkedin: https://www.linkedin.com/in/daniel-mccarthy-87458920/
+# Exclude files
+exclude:
+  - '*.gem'
+  - '*.gemspec'
+  - docs
+  - tools
+  - README.md
+  - LICENSE
+  - rollup.config.js
+  - package*.json
+
+# Compress
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
