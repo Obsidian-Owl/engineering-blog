@@ -1,10 +1,8 @@
 ---
-layout: post
 title: "AI Agentic Development Workflows: A Personal Journey"
 date: 2025-07-08
-categories: [ai, development, workflows]
-tags: [claude-code, ai-development, software-architecture]
-excerpt: "Lessons from 18 months of experimenting with AI-assisted coding"
+categories: [AI, Development]
+tags: [claude-code, ai-development, software-architecture, tdd, workflows]
 ---
 
 # AI Agentic Development Workflows: A Personal Journey
