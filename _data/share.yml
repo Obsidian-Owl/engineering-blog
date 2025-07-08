@@ -1,0 +1,12 @@
+platforms:
+  - type: Twitter
+    icon: "fa-brands fa-x-twitter"
+    link: "https://twitter.com/intent/tweet?text=TITLE&url=URL"
+    
+  - type: LinkedIn
+    icon: "fab fa-linkedin"
+    link: "https://www.linkedin.com/sharing/share-offsite/?url=URL"
+    
+  - type: Copy
+    icon: "fas fa-link"
+    link: "javascript:void(0);"
