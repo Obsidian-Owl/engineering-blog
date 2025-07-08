@@ -1,0 +1,23 @@
+# Site settings
+title: Obsidian Owl Engineering
+description: AI Development Workflows, Architecture, and Real-World Lessons
+author: Daniel McCarthy
+email: macmilky1@gmail.com
+
+# Build settings
+theme: minima  # Start with the default theme
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Permalink structure
+permalink: /:year/:month/:day/:title/
+
+# Site URL (update when you know it)
+url: "https://obsidian-owl.github.io"
+baseurl: "/blog"  # or "" if using obsidian-owl.github.io directly
+
+# Social links (optional)
+github: https://github.com/MacAttak
+linkedin: https://www.linkedin.com/in/daniel-mccarthy-87458920/
