@@ -56,7 +56,7 @@ Ideally, I'd design all interfaces myself, use contract tests on top of Test Dri
 
 My pre-commit and CI/CD pipeline has evolved into a comprehensive safety net. Every time Claude Code commits code, automated checks run to catch common issues - trailing whitespace, malformed JSON/YAML files, accidentally committed private keys, and more.
 
-For my Unity project, I validate that all assets have their required meta files (a common source of project corruption when AI forgets to track them). For backend code, I=the hooks run type, compilation checks etc - but here's the crucial bit: **everything runs in Docker containers that match my CI environment exactly**.
+For my Unity project, I validate that all assets have their required meta files (a common source of project corruption when AI forgets to track them). For backend code, the hooks run type, compilation checks etc - but here's the crucial bit: **everything runs in Docker containers that match my CI environment exactly**.
 
 This Docker-based approach catches environment-specific issues before they hit production. I've actually had "arguments" with Claude Code about bugs because "it works on my machine" - the AI was right, it did work in its environment, but failed in CI due to subtle differences. Sound familiar?
 
