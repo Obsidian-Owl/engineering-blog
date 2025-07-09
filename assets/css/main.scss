@@ -10,58 +10,97 @@
 
 // Custom styles for better readability and layout
 
-// Increase content width for better desktop experience
-.page__content {
-  p, li, dl {
-    font-size: 1em; // Slightly larger text
+// Override sidebar widths for more content space
+$right-sidebar-width-narrow: 200px !default;
+$right-sidebar-width: 250px !default;
+$right-sidebar-width-wide: 300px !default;
+
+// Remove the constrained width for main content
+.page {
+  @include breakpoint($large) {
+    padding-right: 0;
+  }
+
+  @include breakpoint($x-large) {
+    padding-right: 0;
+    max-width: 1400px;
   }
 }
 
-// Wider content area for single posts
-@media (min-width: 80em) {
-  .page {
-    .page__inner-wrap {
-      float: left;
-      margin-left: 0;
-      margin-right: 0;
-      width: 100%;
-      clear: both;
+// Fix the cramped content issue
+.page__inner-wrap {
+  @include breakpoint($x-large) {
+    max-width: 1400px;
+  }
+}
 
-      .page__content,
-      .page__meta,
-      .page__share {
-        position: relative;
-        float: left;
-        margin-left: 0;
-        margin-right: 0;
-        width: 100%;
-        clear: both;
+// Make single layout use more space
+.layout--single {
+  .page__inner-wrap {
+    @include breakpoint($large) {
+      padding-left: 1em;
+      padding-right: 1em;
+    }
+
+    @include breakpoint($x-large) {
+      padding-left: 2em;
+      padding-right: 2em;
+    }
+  }
+
+  // When author profile is shown
+  &.author-profile {
+    .page__content {
+      @include breakpoint($large) {
+        float: right;
+        width: calc(100% - 200px);
+        padding-left: 1em;
+      }
+
+      @include breakpoint($x-large) {
+        width: calc(100% - 250px);
+        padding-left: 2em;
       }
     }
   }
 
-  // Increase main content width
-  .page__content {
-    float: left;
-    width: calc(100% - 300px); // Sidebar is 300px
-    padding-right: 2em;
-  }
-
-  // Single layout adjustments
-  .layout--single {
-    .page__inner-wrap {
-      .page__content {
-        width: 75%; // Use more of the available space
-        max-width: 1024px;
-        margin: 0 auto;
+  // For wide class - use full width
+  &.wide {
+    .page__content {
+      @include breakpoint($large) {
+        width: 100%;
         float: none;
+        padding-left: 0;
+        padding-right: 0;
       }
+    }
+
+    // Hide author profile on wide pages
+    .sidebar__left {
+      display: none;
+    }
+  }
+}
+
+// Default single layout (without wide class)
+.layout--single:not(.wide) {
+  .page__content {
+    @include breakpoint($large) {
+      float: right;
+      width: calc(100% - 200px);
+    }
+
+    @include breakpoint($x-large) {
+      width: calc(100% - 300px);
     }
   }
 }
 
 // Typography improvements
 .page__content {
+  font-size: 1em;
+  line-height: 1.7;
+
   h2 {
     margin-top: 2em;
     margin-bottom: 0.5em;
@@ -85,21 +124,19 @@
     padding: 0.1em 0.3em;
     border-radius: 3px;
   }
-}
 
-// Dark mode adjustments
-.layout--single.dark {
-  code.language-plaintext {
-    background: rgba(255, 255, 255, 0.1);
-  }
-}
-
-// Better spacing for lists
-.page__content {
+  // Better spacing for lists
   ul, ol {
     li {
       margin-bottom: 0.5em;
     }
+  }
+}
+
+// Dark mode adjustments
+html.dark {
+  code.language-plaintext {
+    background: rgba(255, 255, 255, 0.1);
   }
 }
 
@@ -124,5 +161,36 @@
 @media (max-width: 64em) {
   .page__content {
     font-size: 0.95em;
+  }
+}
+
+// TOC adjustments for better space usage
+.sidebar__right {
+  @include breakpoint($large) {
+    width: 200px;
+    margin-right: -200px;
+  }
+
+  @include breakpoint($x-large) {
+    width: 250px;
+    margin-right: -250px;
+  }
+
+  // Sticky TOC styling
+  &.sticky {
+    @include breakpoint($large) {
+      max-height: calc(100vh - 4em);
+      overflow-y: auto;
+    }
+  }
+}
+
+// Improve page layout for about page
+.page.about {
+  .page__content {
+    @include breakpoint($large) {
+      max-width: 900px;
+      margin: 0 auto;
+    }
   }
 }
