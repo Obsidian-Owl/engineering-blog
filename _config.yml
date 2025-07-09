@@ -4,118 +4,94 @@ tagline: AI Development Workflows & Architecture
 description: Exploring the intersection of AI and software development through real-world experience.
 url: "https://obsidian-owl.github.io"
 baseurl: "/engineering-blog"
-
-# Author
 author: Daniel McCarthy
+email: macmilky1@gmail.com
 
-# Social
-social:
-  name: Daniel McCarthy
-  email: macmilky1@gmail.com
+# Use remote theme (this works with GitHub Pages!)
+remote_theme: "mmistakes/minimal-mistakes-jekyll@4.26.2"
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist  
+  - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-remote-theme
+
+# Theme Settings
+minimal_mistakes_skin: "dark" # "air", "aqua", "contrast", "dark", "default", "dirt", "neon", "mint", "plum", "sunrise"
+locale: "en-AU"
+title_separator: "|"
+name: "Daniel McCarthy"
+description: "AI Development Workflows & Architecture"
+masthead_title: "Obsidian Owl"
+breadcrumbs: true
+words_per_minute: 200
+
+# Site Author
+author:
+  name: "Daniel McCarthy"
+  bio: "Full-stack developer exploring AI-assisted development workflows"
+  location: "Sydney, Australia"
   links:
-    - https://github.com/Obsidian-Owl
-    - https://www.linkedin.com/in/daniel-mccarthy-87458920/
-
-# Site Verification (optional)
-google_site_verification: # fill in your Google verification code
-
-# Analytics (optional)
-google_analytics:
-  id: # fill in your Google Analytics ID
-
-# Theme
-theme: jekyll-theme-chirpy
-
-# Timezone
-timezone: Australia/Sydney
-
-# jekyll-seo-tag settings
-twitter:
-  username: # twitter username without @
-  
-# Comments (optional - uses GitHub discussions)
-comments:
-  active: giscus
-  giscus:
-    repo: Obsidian-Owl/engineering-blog
-    repo_id: # Get from https://giscus.app
-    category: Comments
-    category_id: # Get from https://giscus.app
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:macmilky1@gmail.com"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/Obsidian-Owl"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/daniel-mccarthy-87458920/"
 
 # Reading time
 reading_time: true
 
-# Appearance
-appearance: "auto" # auto, light, or dark
+# Comments (using GitHub issues)
+comments:
+  provider: "giscus"
+  giscus:
+    repo_id: "R_kgDOPIuEkg" # Get from https://giscus.app
+    category_name: "General"
+    category_id: "DIC_kwDOPIuEks4CsrE_"
+    mapping: "pathname"
+    strict: "0"
+    reactions_enabled: "1"
+    emit_metadata: "0"
+    input_position: "top"
+    theme: "dark"
+    lang: "en"
 
-# The CDN endpoint for images.
-# Notice that once it is assigned, the CDN url
-# will be added to all image (avatar, posts' images, etc.) paths
-img_cdn:
+# Analytics
+analytics:
+  provider: false # Set to 'google-gtag' when ready
+  google:
+    tracking_id: # your Google Analytics ID
 
-# Profile sidebar
-avatar: # path to avatar image
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+      show_date: true
+      toc: true
+      toc_sticky: true
 
-# Tabs on sidebar
-tabs:
-  - About
-  - Archives
-  - Categories  
-  - Tags
-
-# Pagination
 paginate: 10
-
-# Plugins
-plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-archives
+paginate_path: /page:num/
 
 # Archives
-jekyll-archives:
-  enabled:
-    - categories
-    - tags
-  layouts:
-    category: category
-    tag: tag
-  permalinks:
-    tag: /tags/:name/
-    category: /categories/:name/
-
-# Build settings
-markdown: kramdown
-kramdown:
-  syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    css_class: highlight
-    span:
-      line_numbers: false
-    block:
-      line_numbers: true
-      start_line: 1
-
-# Exclude files
-exclude:
-  - '*.gem'
-  - '*.gemspec'
-  - docs
-  - tools
-  - README.md
-  - LICENSE
-  - rollup.config.js
-  - package*.json
-
-# Compress
-compress_html:
-  clippings: all
-  comments: all
-  endings: all
-  profile: false
-  blanklines: false
-  ignore:
-    envs: [development]
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
