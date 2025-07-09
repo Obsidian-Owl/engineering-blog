@@ -7,14 +7,13 @@ baseurl: "/engineering-blog"
 author: Daniel McCarthy
 email: macmilky1@gmail.com
 
-# Use built-in GitHub Pages theme
-theme: jekyll-theme-hacker  # or jekyll-theme-cayman, jekyll-theme-midnight
+# _config.yml
+remote_theme: mmistakes/minimal-mistakes-jekyll
 
-plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-seo-tag
+minimal_mistakes_skin: "dark" # "air", "aqua", "contrast", "default", "dirt", "neon", "mint", "plum", "sunrise"
+
+# Navigation
+nav_enabled: true
 
 # Site Author
 author:
@@ -32,15 +31,20 @@ author:
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/daniel-mccarthy-87458920/"
 
-# Pagination
-paginate: 10
-paginate_path: /page:num/
+# Reading time
+reading_time: true
+show_date: true
 
-# Default front matter
+# Defaults
 defaults:
   - scope:
       path: ""
       type: posts
     values:
-      layout: post
-      author: Daniel McCarthy
+      layout: single
+      author_profile: true
+      read_time: true
+      share: true
+      related: true
+      toc: true
+      toc_sticky: true
