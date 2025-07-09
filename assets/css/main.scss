@@ -41,7 +41,6 @@ $right-sidebar-width-wide: 300px !default;
 .layout--single {
   .page__inner-wrap {
     @include breakpoint($large) {
-      position: relative;  // For absolute positioned TOC
       padding-left: 0;
       padding-right: 0;
     }
@@ -88,41 +87,43 @@ $right-sidebar-width-wide: 300px !default;
 
 // Default single layout (without wide class)
 .layout--single:not(.wide) {
+  .page__inner-wrap {
+    @include breakpoint($large) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+  
   .page__content {
     @include breakpoint($large) {
-      float: left;
-      width: calc(100% - #{$right-sidebar-width-narrow} - 1em);
-      padding-right: 1em;
+      flex: 1;
+      max-width: calc(100% - #{$right-sidebar-width-narrow} - 2em);
+      padding-right: 2em;
     }
 
     @include breakpoint($x-large) {
-      width: calc(100% - #{$right-sidebar-width} - 2em);
-      padding-right: 2em;
+      max-width: calc(100% - #{$right-sidebar-width} - 3em);
+      padding-right: 3em;
     }
   }
   
   // Ensure the TOC appears on the right
   .sidebar__right {
     @include breakpoint($large) {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: $right-sidebar-width-narrow;
-      margin-right: 0;
-      padding-left: 1em;
-      z-index: 10;
+      flex: 0 0 $right-sidebar-width-narrow;
+      margin-left: 0;
       
       &.sticky {
-        @include clearfix();
         position: sticky;
         top: 2em;
-        float: right;
-        clear: both;
+        max-height: calc(100vh - 4em);
+        overflow-y: auto;
       }
     }
 
     @include breakpoint($x-large) {
-      width: $right-sidebar-width;
+      flex: 0 0 $right-sidebar-width;
     }
   }
 }
@@ -202,6 +203,10 @@ html.dark {
   border-radius: 4px;
   padding: 1em;
   
+  @include breakpoint($large) {
+    margin-top: 0;
+  }
+  
   ul {
     margin: 0;
     padding: 0;
@@ -224,6 +229,11 @@ html.dark {
   .active {
     font-weight: bold;
   }
+}
+
+// Dark mode TOC background
+html.dark .toc {
+  background: rgba(255, 255, 255, 0.02);
 }
 
 // Improve page layout for about page
