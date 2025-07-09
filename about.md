@@ -5,7 +5,7 @@ permalink: /about/
 author_profile: true
 ---
 
-I'm a data and AI engineering leader with over 15 years of experience in data engineering, machine learning, and platform engineering. Currently serving as Chapter Area Lead for Advanced Analytics Platforms at Commonwealth Bank, I've spent my career designing, building, and optimising data solutions across various business domains including credit, risk, marketing, operations, and finance.
+I'm a data and AI engineering leader with over 15 years of experience in data engineering, machine learning, and platform engineering. Currently serving as Chapter Area Lead for Advanced Analytics Platforms at Commonwealth Bank, I've spent my career designing, building, and optimising data solutions across various business domains including credit, fraud prevention, marketing, operations, and finance.
 
 My mission is to drive change in a sustainable and positive manner by setting clear vision, aligning delivery with organisational goals, and empowering teams to deliver high-quality engineering outcomes. I'm passionate about leveraging data and technology to create value for customers, stakeholders, and society.
 
@@ -25,7 +25,7 @@ This blog documents my personal journey exploring AI-assisted development workfl
 - Managing cognitive load in AI orchestration
 
 ### Tech Stack
-- **Languages**: Python, Go, TypeScript, Rust, R, SAS
+- **Languages**: Python, Go, TypeScript, Rust, R
 - **AI/ML**: Deep Learning, MLOps, Various LLMs, Claude Code
 - **Platforms**: AWS, Railway, Docker, Cloud Data Platforms
 - **Domains**: Data Engineering, Machine Learning, Platform Engineering
