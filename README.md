@@ -23,7 +23,7 @@ This blog documents my personal journey exploring AI-assisted development workfl
 
 ## Tech Stack
 
-**Languages:** Python, Go, TypeScript, Rust, R
-**AI/ML:** Deep Learning, MLOps, Various LLMs, Claude Code
-**Platforms:** AWS, Railway, Docker, Cloud Data Platforms
+**Languages:** Python, Go, TypeScript, Rust, R  
+**AI/ML:** Deep Learning, MLOps, Various LLMs, Claude Code  
+**Platforms:** AWS, Railway, Docker, Cloud Data Platforms  
 **Domains:** Data Engineering, Machine Learning, Platform Engineering
