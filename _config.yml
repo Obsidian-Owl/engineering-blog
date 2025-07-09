@@ -44,8 +44,38 @@ author:
 reading_time: true
 show_date: true
 
+# Pagination
+paginate: 5
+paginate_path: /page:num/
+
+# Include
+include:
+  - _pages
+
+# Archives
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+# Search
+search: true
+search_full_content: true
+search_provider: lunr
+
+# Analytics (optional - add your tracking ID)
+analytics:
+  provider: false # Set to 'google-gtag' or 'google-universal' when ready
+
+# Comments (optional - configure Giscus when ready)
+comments:
+  provider: false # Set to 'giscus' when configured
+
 # Defaults
 defaults:
+  # _posts
   - scope:
       path: ""
       type: posts
@@ -53,7 +83,17 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
+      comments: true
       share: true
       related: true
       toc: true
       toc_sticky: true
+      toc_label: "On this page"
+      toc_icon: "list"
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true

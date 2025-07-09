@@ -1,7 +1,8 @@
 ---
-layout: page
+layout: single
 title: About
 permalink: /about/
+author_profile: true
 ---
 
 I'm a full-stack developer passionate about pushing the boundaries of AI-assisted development workflows. 

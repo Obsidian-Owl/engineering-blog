@@ -1,0 +1,128 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+// Import Minimal Mistakes theme
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+// Custom styles for better readability and layout
+
+// Increase content width for better desktop experience
+.page__content {
+  p, li, dl {
+    font-size: 1em; // Slightly larger text
+  }
+}
+
+// Wider content area for single posts
+@media (min-width: 80em) {
+  .page {
+    .page__inner-wrap {
+      float: left;
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+      clear: both;
+
+      .page__content,
+      .page__meta,
+      .page__share {
+        position: relative;
+        float: left;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        clear: both;
+      }
+    }
+  }
+
+  // Increase main content width
+  .page__content {
+    float: left;
+    width: calc(100% - 300px); // Sidebar is 300px
+    padding-right: 2em;
+  }
+
+  // Single layout adjustments
+  .layout--single {
+    .page__inner-wrap {
+      .page__content {
+        width: 75%; // Use more of the available space
+        max-width: 1024px;
+        margin: 0 auto;
+        float: none;
+      }
+    }
+  }
+}
+
+// Typography improvements
+.page__content {
+  h2 {
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+  }
+  
+  h3 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+  }
+  
+  // Better code block styling
+  pre {
+    font-size: 0.9em;
+    line-height: 1.4;
+  }
+  
+  // Inline code
+  code.language-plaintext {
+    font-size: 0.9em;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 0.1em 0.3em;
+    border-radius: 3px;
+  }
+}
+
+// Dark mode adjustments
+.layout--single.dark {
+  code.language-plaintext {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+// Better spacing for lists
+.page__content {
+  ul, ol {
+    li {
+      margin-bottom: 0.5em;
+    }
+  }
+}
+
+// Archive page improvements
+.archive__item {
+  margin-bottom: 2em;
+  
+  .archive__item-title {
+    margin-top: 0;
+    font-size: 1.25em;
+  }
+}
+
+// Navigation improvements
+.greedy-nav {
+  .site-title {
+    font-weight: bold;
+  }
+}
+
+// Mobile responsiveness maintained
+@media (max-width: 64em) {
+  .page__content {
+    font-size: 0.95em;
+  }
+}
