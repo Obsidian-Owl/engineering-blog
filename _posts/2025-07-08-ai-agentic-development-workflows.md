@@ -109,20 +109,6 @@ In FinancialFusion, Encore + Go creates an incredibly tight feedback loop:
 
 This rapid feedback is invaluable. When AI makes mistakes (and it will), you know immediately.
 
-## The Reality of AI Development
-
-Some days, the flow is incredible. The code feels like an extension of my imagination - ideas becoming reality at the speed of thought. We truly "vibe" together, and it's intoxicating.
-
-Then there are the other days.
-
-Days when the AI builds an entire custom solution despite my request to use an existing framework. My intent was to minimise maintenance burden, but I didn't express it clearly enough. By the time I notice, we're too far down the wrong path, and I have to scrap hours of work.
-
-The exhausting part? I'm fallible too. My attention slips. I miss deviations. Then I beat myself up for not watching closely enough, even though I'm already stretching my brain to keep up with the pace of AI-generated code.
-
-Some days I feel more like an air traffic controller than a developer - orchestrating multiple AI agents, catching hallucinations, maintaining quality standards, all while reviewing code at superhuman speeds.
-
-The AI doesn't get tired, but you will.
-
 ## My Toolkit
 
 Beyond Claude Code, here's what actually makes a difference:
@@ -141,6 +127,20 @@ But honestly? **High-quality CLI tools often beat everything else**:
 - `encore` - Rapidly access backend logs, test database, etc
 
 The key is immediate, parseable feedback that AI agents can work with effectively.
+
+## The Reality of AI Development
+
+Some days, the flow is incredible. The code feels like an extension of my imagination - ideas becoming reality at the speed of thought. We truly "vibe" together, and it's intoxicating.
+
+Then there are the other days.
+
+Days when the AI builds an entire custom solution despite my request to use an existing framework. My intent was to minimise maintenance burden, but I didn't express it clearly enough. By the time I notice, we're too far down the wrong path, and I have to scrap hours of work.
+
+The exhausting part? I'm fallible too. My attention slips. I miss deviations. Then I beat myself up for not watching closely enough, even though I'm already stretching my brain to keep up with the pace of AI-generated code.
+
+Some days I feel more like an air traffic controller than a developer - orchestrating multiple AI agents, catching hallucinations, maintaining quality standards, all while reviewing code at superhuman speeds.
+
+The AI doesn't get tired, but you will.
 
 ## What I've Learned
 
