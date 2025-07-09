@@ -15,11 +15,11 @@ This post shares what I've learned about building an effective AI-assisted devel
 
 I should clarify upfront - these insights come from personal projects with zero real users. But I've tried to maintain professional standards because, well, that's how you learn properly.
 
-**Memory Cascade** is my gaming passion project - an isometric adventure game with AI-powered NPCs. Built with Unity 6000.1.9f1 and a TypeScript backend on Railway.
+**Memory Cascade** is my gaming passion project - an isometric adventure game with AI-powered NPCs. Built with Unity and a Python backend (just a LLM Router and Guardrails service) on Railway.
 
-**FinancialFusion** is where I experiment with enterprise patterns - a financial data platform built with Go and Encore. 
+**FinancialFusion** is where I experiment with enterprise patterns - a financial data platform built with Go and Encore. This is where I have spent most of my time - you can find a comprehensive outline of what I'm builing at the end of this post. Its a bit of a beast and too long to explain here!
 
-Both are deployed to real cloud infrastructure (AWS and Railway) because I wanted to understand the full development lifecycle, not just the coding bits.
+Both are deployed to real cloud infrastructure (Encore / AWS and Railway) because I wanted to understand the full development lifecycle, not just the coding bits.
 
 ## Finding the Right Tools
 
@@ -27,7 +27,7 @@ I've tried most of the AI coding assistants out there - Cursor, Windsurf, Devon,
 
 For my workflow, Claude Code has been the most effective. Its approach to agent-based development, combined with thoughtful prompt engineering and context awareness, creates something that feels genuinely collaborative rather than just predictive text on steroids.
 
-That said, it's not without its challenges. My Claude Code bills are... significant. And the cognitive load of orchestrating it properly is real.
+That said, it's not without its challenges. My Claude & Cursor bills have been... significant. And the cognitive load of orchestrating it properly is real.
 
 ## How I Actually Work
 
@@ -56,7 +56,7 @@ Ideally, I'd design all interfaces myself, use contract tests on top of TDD prac
 
 My pre-commit and CI/CD pipeline has evolved into a comprehensive safety net. Every time Claude Code commits code, automated checks run to catch common issues - trailing whitespace, malformed JSON/YAML files, accidentally committed private keys, and more.
 
-For Unity projects, I validate that all assets have their required meta files (a common source of project corruption when AI forgets to track them). For backend code, I run ESLint and TypeScript compilation checks - but here's the crucial bit: **everything runs in Docker containers that match my CI environment exactly**.
+For my Unity project, I validate that all assets have their required meta files (a common source of project corruption when AI forgets to track them). For backend code, I run ESLint and TypeScript compilation checks - but here's the crucial bit: **everything runs in Docker containers that match my CI environment exactly**.
 
 This Docker-based approach catches environment-specific issues before they hit production. I've actually had "arguments" with Claude Code about bugs because "it works on my machine" - the AI was right, it did work in its environment, but failed in CI due to subtle differences. Sound familiar?
 
@@ -186,3 +186,34 @@ If you're starting this journey: invest in understanding software design princip
 
 *What's been your experience with AI coding tools? I'm always curious to hear how others are navigating this new landscape - feel free to reach out and share your story.*
 
+---
+
+## What is FinancialFusion?
+
+**FinancialFusion is a modern financial services aggregator** that enables users to connect Australian banking accounts, upload financial documents, and gain AI-powered insights across their entire financial ecosystem.
+
+## Architecture
+
+### Backend
+- **Microservices** built with **Go (Encore.dev)** and **Python (FastAPI)** for AI
+- **Domain-driven design** with bounded contexts (Identity, Banking, Registry, Document, Energy - with lots of future work for Insurance, Water, Telco, etc)
+- **Event-driven architecture** using Encore's PubSub system
+- **MCP servers** expose all platform capabilities for autonomous agents
+- **PostgreSQL** for persistence, **Encore Object Storage** for documents
+
+### Frontend
+- **Next.js 14+** with App Router, **React 18**, and **TypeScript 5.8**
+- **Authentication-first** design with **Clerk** protecting all routes
+- **Auto-generated TypeScript client** (`@financial-fusion/api-client`) with lazy auth
+- **Tailwind CSS** design system with service category theming
+
+## Key Integrations
+- **Clerk** - Authentication and user management
+- **Basiq** - Australian banking data aggregation
+- **DocuPipe** - Document processing and OCR
+
+## Development Philosophy
+- **Agentic-first architecture** - All services designed for autonomous agent operations
+- **BDD/TDD approach** with comprehensive testing
+- **Defensive programming** with extensive error handling and logging
+- **AI testing support** with Clerk testing tokens for automated workflows
