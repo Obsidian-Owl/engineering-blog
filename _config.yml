@@ -8,9 +8,18 @@ author: Daniel McCarthy
 email: macmilky1@gmail.com
 
 # _config.yml
-remote_theme: mmistakes/minimal-mistakes-jekyll
+remote_theme: mmistakes/minimal-mistakes@4.27.1
 
 minimal_mistakes_skin: "dark" # "air", "aqua", "contrast", "default", "dirt", "neon", "mint", "plum", "sunrise"
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
 
 # Navigation
 nav_enabled: true
