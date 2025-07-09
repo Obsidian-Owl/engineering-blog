@@ -5,8 +5,6 @@ categories: [AI, Development]
 tags: [claude-code, ai-development, software-architecture, tdd, workflows]
 ---
 
-# AI Agentic Development Workflows: A Personal Journey
-
 *Lessons from 18 months of experimenting with AI-assisted coding*
 
 I've spent the last year and a half tinkering with AI coding tools on my personal projects. Not for work, not for any grand purpose - just pure curiosity about what's possible when you push these tools to their limits.
