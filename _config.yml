@@ -8,7 +8,7 @@ author: Daniel McCarthy
 email: macmilky1@gmail.com
 
 # Use remote theme (this works with GitHub Pages!)
-remote_theme: "mmistakes/minimal-mistakes-jekyll@4.26.2"
+remote_theme: "mmistakes/minimal-mistakes-jekyll"
 
 plugins:
   - jekyll-paginate
