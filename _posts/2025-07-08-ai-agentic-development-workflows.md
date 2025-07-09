@@ -122,7 +122,7 @@ Beyond Claude Code, here's what actually makes a difference:
 
 But honestly? **High-quality CLI tools often beat everything else**:
 
-- `gh` (GitHub CLI) - Essential for repository management
+- `gh` (GitHub CLI) - Just works better than MCP
 - `railway` - Deployment without the pain
 - `encore` - Rapidly access backend logs, test database, etc
 
