@@ -1,0 +1,28 @@
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Bundle
+.bundle/
+vendor/bundle/
+Gemfile.lock
+
+# Node
+node_modules/
+package-lock.json
+
+# Build artifacts
+public/
+
+# OMC state
+.omc/
+
+# OS
+.DS_Store
+*.swp
+
+# IDE
+.idea/
+.vscode/
