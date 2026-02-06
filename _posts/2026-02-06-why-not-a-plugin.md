@@ -13,7 +13,7 @@ Thomson Reuters fell 16%. LexisNexis parent RELX dropped 14%. Indian IT giants, 
 
 The cause? Anthropic released eleven open-source plugins for Claude Cowork on January 30th. Among them was a legal plugin—markdown files describing how to automate contract review, NDA triage, compliance workflows, and legal briefings. Not a new model. Not superior engineering. Just domain expertise encoded in text, surfaced to a general-purpose AI.
 
-This wasn't an isolated event. Twelve months earlier, DeepSeek triggered a $600 billion single-day loss at Nvidia by demonstrating that competitive AI models could be trained for $5.6 million in compute instead of hundreds of millions. OpenClaw—an open-source agent that gives AI models "hands" to operate computers—reached 100,000 GitHub stars in two months.
+This wasn't an isolated event. Twelve months earlier, DeepSeek triggered a $600 billion single-day loss at Nvidia by demonstrating that competitive AI models could be trained for $5.6 million in compute instead of hundreds of millions. OpenClaw—an open-source agent powered by Mario Zechner's [pi](https://mariozechner.at/posts/2025-11-30-pi-coding-agent/) that gives AI models "hands" to operate computers—reached 100,000 GitHub stars in two months.
 
 The pattern is consistent: **simplicity is winning**.
 
@@ -73,7 +73,7 @@ This is how the legal plugin can have deep expertise across contracts, NDAs, com
 
 **Maintainable.** Updating a skill means editing text. Review, version control, and deployment are trivial.
 
-The common thread across Claude Code, OpenCode, pi-agents, and OpenClaw: *the complexity is in the model, not the harness*. The infrastructure stays thin. The value comes from what the AI can do, not from elaborate orchestration around it.
+The common thread across Claude Code, OpenCode, and OpenClaw: *the complexity is in the model, not the harness*. Mario Zechner's [pi](https://mariozechner.at/posts/2025-11-30-pi-coding-agent/)—the agent at OpenClaw's core—proves this with radical minimalism: a system prompt under 1,000 tokens, four tools (read, write, edit, bash), no framework dependencies. It [benchmarks competitively](https://lucumr.pocoo.org/2026/1/31/pi/) against tools with ten times the scaffolding. The infrastructure stays thin. The value comes from what the AI can do, not from elaborate orchestration around it.
 
 ## Who This Matters For
 
