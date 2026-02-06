@@ -13,7 +13,7 @@ Thomson Reuters fell 16%. LexisNexis parent RELX dropped 14%. Indian IT giants, 
 
 The cause? Anthropic released eleven open-source plugins for Claude Cowork on January 30th. Among them was a legal plugin—markdown files describing how to automate contract review, NDA triage, compliance workflows, and legal briefings. Not a new model. Not superior engineering. Just domain expertise encoded in text, surfaced to a general-purpose AI.
 
-This wasn't an isolated event. Thirteen months earlier, DeepSeek triggered a $600 billion single-day loss at Nvidia by demonstrating that competitive AI models could be built for $5.6 million instead of hundreds of millions. OpenClaw—an open-source agent that gives AI models "hands" to operate computers—reached 100,000 GitHub stars in two months.
+This wasn't an isolated event. Twelve months earlier, DeepSeek triggered a $600 billion single-day loss at Nvidia by demonstrating that competitive AI models could be trained for $5.6 million in compute instead of hundreds of millions. OpenClaw—an open-source agent that gives AI models "hands" to operate computers—reached 100,000 GitHub stars in two months.
 
 The pattern is consistent: **simplicity is winning**.
 
@@ -61,7 +61,7 @@ The key principle is **progressive disclosure**. Skills employ a three-stage loa
 2. **Full instructions (<5k tokens):** Loaded when the AI determines the skill applies.
 3. **Bundled resources:** Scripts, documentation, templates. Loaded only as needed.
 
-The result: 98% token reduction when skills are present but not used. You can include dozens of skills in a deployment, but only pay for the ones actually activated.
+The result: 90% token reduction when skills are present but not used. You can include dozens of skills in a deployment, but only pay for the ones actually activated.
 
 This is how the legal plugin can have deep expertise across contracts, NDAs, compliance, and briefings without bloating every interaction.
 
@@ -81,11 +81,11 @@ I think about the people who use data platforms every day.
 
 **Analysts** spend most of their time on discovery and preparation—finding tables, understanding columns, tracing why numbers don't match. One analytics leader noted that tracing a single data quality issue "often takes at least a couple of hours" before any actual analytical work can begin.
 
-**Data Scientists** report that 76% say data wrangling is the worst part of their job. They spend more time consolidating data from disparate sources than building models.
+**Data Scientists** report that 57% say data cleaning and organisation is the least enjoyable part of their job. They spend more time consolidating data from disparate sources than building models.
 
 **Data Stewards** are rarely in dedicated full-time roles. The work is continuous—data ecosystems constantly evolve. They're perpetually behind on documentation because documentation isn't their only job.
 
-**Business Users**—only 21% feel confident working with data. The push for self-service analytics has a fundamental flaw: it requires users to become data experts, which "takes years of hands-on effort."
+**Business Users**—only 21% feel confident working with data. The push for self-service analytics has a fundamental flaw: it requires users to become data experts, which takes sustained hands-on effort.
 
 None of these personas are building production data pipelines.  They're all stuck at an earlier stage: discovery, understanding, and translation. The bottleneck isn't compute or tooling—it's the cognitive overhead of navigating complex data environments. 
 
