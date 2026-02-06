@@ -1,6 +1,6 @@
 ---
 title: "AI Agentic Development Workflows: A Personal Journey"
-date: 2025-07-08
+date: 2025-07-08 12:00:00 +1000
 categories: [AI, Development]
 tags: [claude-code, ai-development, software-architecture, tdd, workflows]
 ---
