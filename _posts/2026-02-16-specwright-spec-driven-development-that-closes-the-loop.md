@@ -17,9 +17,9 @@ I've written about this before. My early experiments with AI-assisted developmen
 
 ## What I Tried First
 
-I went through the usual progression. I tried [Spec Kit](https://github.com/spec-kit/spec-kit) and genuinely liked the structured approach—spec-first development is the right idea. But it focused heavily on the planning side and didn't have the verification muscle I needed. Specs would get written beautifully, then the implementation would drift, and nothing would catch it until a human reviewed the PR.
+I went through the usual progression. I tried [Spec Kit](https://github.com/github/spec-kit) and genuinely liked the structured approach—spec-first development is the right idea. But it focused heavily on the planning side and didn't have the verification muscle I needed. Specs would get written beautifully, then the implementation would drift, and nothing would catch it until a human reviewed the PR.
 
-I experimented with [Oh-My-ClaudeCode](https://github.com/anthropics/oh-my-claudecode) and appreciated the configurability. But it felt a bit too hands-off for my taste. I generally prefer a model where I'm heavily involved at key points in the cycle—design decisions and verification—rather than delegating the whole thing end-to-end.
+I experimented with [Oh-My-ClaudeCode](https://github.com/Yeachan-Heo/oh-my-claudecode) and appreciated the configurability. But it felt a bit too hands-off for my taste. I generally prefer a model where I'm heavily involved at key points in the cycle—design decisions and verification—rather than delegating the whole thing end-to-end.
 
 None of the tools I found really focused on the git ops and quality controls I wanted. So I ended up accumulating skills, rules, and constitution files scattered across projects. Every project had its own flavour. Nothing was consistent, nothing got updated systematically, and the lessons from one project never made it to the next.
 
