@@ -28,7 +28,7 @@ social:
 avatar: /assets/img/avatar.png
 
 # Theme mode: light, dark, or blank for auto
-theme_mode: dark
+theme_mode:
 
 # Analytics (optional)
 # google_analytics:
